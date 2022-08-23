@@ -1,0 +1,12 @@
+<h2>Create a Boat</h2>
+<div class="container">
+  <%= simple_form_for (@boat) do |f| %>
+
+    <%= f.input :brand, class:'form-control'%>
+    <%= f.input :boat_type, class:'form-control' %>
+    <%= f.input :year, class:'form-control' %>
+    <%= f.input :size, class:'form-control' %>
+
+    <%= f.submit "Submit review", class: "btn btn-primary"%>
+  <% end %>
+</div>
