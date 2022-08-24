@@ -1,0 +1,16 @@
+<div class="container d-flex justify-content-center mt-5">
+<div class="card w-50">
+  <div class="card-body">
+    <h2 class="card-title">Booking</h2>
+    <%= simple_form_for [@boat, @booking] do |f| %>
+
+      <%= f.input :brand, class:'form-control'%>
+      <%= f.input :boat_type, class:'form-control' %>
+      <%= f.input :year, class:'form-control' %>
+      <%= f.input :size, class:'form-control' %>
+
+      <%= f.submit "Submit review", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>
+</div>
