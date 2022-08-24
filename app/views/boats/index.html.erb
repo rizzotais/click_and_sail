@@ -1,9 +1,19 @@
-<ul>
-  <% @boats.each do |boat| %>
-    <li><%= boat.brand %></li>
-    <li><%= boat.size %></li>
-    <li><%= boat.year %></li>
-    <li><%= boat.type %></li>
-  <% end %>
-</ul>
+<div class="banner">
+</div>
+<div class='container w-75'>
+  <div class="row">
+    <% @boats.each do |boat| %>
+    <div class="col d-f">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.cnn.com/cnnnext/dam/assets/210701131326-worlds-largest-yacht--credit--winch-design-3-full-169.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> <%= boat.brand %></h5>
+          <p class="card-text"> <%= boat.size %></p>
+          <p class="card-text"> <%= boat.boat_type %></p>
 
+      </div>
+    </div>
+    </div>
+    <% end %>
+  </div>
+</div>
