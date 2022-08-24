@@ -3,7 +3,7 @@ class BoatsController < ApplicationController
   def index
     @boats = Boat.all
   end
-  
+
   def show
     @boat = Boat.find(params[:id])
   end
@@ -15,8 +15,8 @@ class BoatsController < ApplicationController
   def create
     @boat = Boat.new(boat_params)
     @boat.user = current_user
-    @boat.save
-    # redirect_to boat_path(@boat)
+    @boat.save!
+    redirect_to boats_path
   end
 
   private
