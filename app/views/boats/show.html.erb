@@ -1,3 +1,13 @@
-<h1> Boat <%=@boat.boat_type%> <%=@boat.brand%>  ! </h1>
-<p> Size <%= @boat.size%> </p>
-<p> year <%=@boat.year%> </p>
+<div class="card mb-3">
+  <img <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill %> src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h1 class="card-title"> Boat <%=@boat.boat_type%> <%=@boat.brand%>  ! </h1>
+    <p class="card-text">Size <%= @boat.size%></p>
+    <p class="card-text">Year: <%= @boat.year%></p>
+    <p class="card-text">Size: <%= @boat.size%></p>
+    <p class="card-text">Type: <%= @boat.boat_type%></p>
+  </div>
+</div>
+<li class="nav-item">
+   <%= link_to "Booking", new_boat_booking_path(@boat), class: "nav-link" %>
+ </li>

@@ -8,18 +8,20 @@
 
 <div class="banner">
 </div>
-<div class='container w-75 m-20px'>
+<div class='container w-75 m-5 mx-auto'>
   <div class="row">
     <% @boats.each do |boat| %>
-    <div class="col d-f">
-      <div class="boat-card" style="width: 18rem;">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/210701131326-worlds-largest-yacht--credit--winch-design-3-full-169.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Brand: <%= boat.brand %></h5>
-          <p class="card-text"> Year: <%= boat.year %></p>
+      <div class="col mb-3 d-flex float-left">
+        <%= link_to boat_path(boat) do %>
+          <div class="card" style="width: 18rem">
+            <%= cl_image_tag boat.photo.key, crop: :fill, class: "card-img-top cards-img" %>
+            <div class="card-body">
+              <h5 class="card-title">Brand: <%= boat.brand %></h5>
+              <p class="card-text"> Year: <%= boat.year %></p>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-    </div>
     <% end %>
   </div>
 </div>
