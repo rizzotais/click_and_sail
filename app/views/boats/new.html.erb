@@ -1,5 +1,7 @@
 <div class="container d-flex justify-content-center mt-5">
 <div class="card w-50">
+<div class="container-fluid d-flex justify-content-center bg-new p-2">
+
   <div class="card-body">
     <h2 class="card-title">Create a Boat</h2>
     <%= simple_form_for (@boat) do |f| %>
@@ -8,7 +10,7 @@
       <%= f.input :boat_type, class:'form-control' %>
       <%= f.input :year, class:'form-control' %>
       <%= f.input :size, class:'form-control' %>
-      
+
 
       <%= f.submit "Create!", class: "btn btn-primary"%>
     <% end %>
