@@ -11,33 +11,17 @@
 <div class='container w-75 m-5 mx-auto'>
   <div class="row">
     <% @boats.each do |boat| %>
-    <div class="col d-f">
-
-      <div class="card" style="width: 18rem;">
-        <%= cl_image_tag boat.photo.key, crop: :fill, class: "card-img-top" %>
-
-        <div class="card-body">
-          <h5 class="card-title">Brand: <%= boat.brand %></h5>
-          <p class="card-text"> Year: <%= boat.year %></p>
+      <div class="col mb-3 d-flex float-left">
+        <%= link_to boat_path(boat) do %>
+          <div class="card" style="width: 18rem">
+            <%= cl_image_tag boat.photo.key, crop: :fill, class: "card-img-top cards-img" %>
+            <div class="card-body">
+              <h5 class="card-title">Brand: <%= boat.brand %></h5>
+              <p class="card-text"> Year: <%= boat.year %></p>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-    </div>
     <% end %>
-  </div>
-</div>
-
-
-
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made for <i class="fas fa-heart"></i> Le Wagon students
   </div>
 </div>

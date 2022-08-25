@@ -4,10 +4,8 @@
     <h2 class="card-title">Booking</h2>
     <%= simple_form_for [@boat, @booking] do |f| %>
 
-      <%= f.input :brand, class:'form-control'%>
-      <%= f.input :boat_type, class:'form-control' %>
-      <%= f.input :year, class:'form-control' %>
-      <%= f.input :size, class:'form-control' %>
+      <%= f.input :check_in, class:'form-control'%>
+      <%= f.input :check_out, class:'form-control' %>
 
       <%= f.submit "Submit review", class: "btn btn-primary"%>
     <% end %>
