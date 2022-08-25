@@ -12,8 +12,10 @@
   <div class="row">
     <% @boats.each do |boat| %>
     <div class="col d-f">
-      <div class="boat-card m-3 card" style="width: 18rem;">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/210701131326-worlds-largest-yacht--credit--winch-design-3-full-169.jpg" class="card-img-top" alt="...">
+
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag boat.photo.key, crop: :fill, class: "card-img-top" %>
+
         <div class="card-body">
           <h5 class="card-title">Brand: <%= boat.brand %></h5>
           <p class="card-text"> Year: <%= boat.year %></p>
@@ -21,5 +23,21 @@
     </div>
     </div>
     <% end %>
+  </div>
+</div>
+
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made for <i class="fas fa-heart"></i> Le Wagon students
   </div>
 </div>
