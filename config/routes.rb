@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
 
   resources :boats, only: %i[index show create new] do
-    resources :bookings, only: %i[show create new edit]
+    resources :bookings, only: %i[show create new destroy]
   end
 end
