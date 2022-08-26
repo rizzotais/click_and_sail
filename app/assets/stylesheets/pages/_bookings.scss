@@ -1,4 +1,9 @@
 .bg-bookings {
-  background-image: url("https://wallpaperaccess.com/full/4118027.jpg");
-  background-size: cover;
+  background-size: 100%;
+    padding: 150px 0px;
+}
+.page-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
