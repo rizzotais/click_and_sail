@@ -1,1 +1,115 @@
 // Specific CSS for your home-page
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700');
+
+/* Fontawesome */
+@import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
+
+/* Utilities */
+body {
+  margin: 0;
+  font-family: Open Sans;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center-home {
+  text-align: center;
+}
+
+// Banner
+.banner-home {
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+}
+
+.banner h1 {
+  color: white;
+}
+
+.banner p {
+  color: white;
+  opacity: .7;
+  font-size: 20px;
+}
+
+/* button */
+.btn-primary {
+  display: inline-block;
+  background-color: #1572A1;
+  padding: 16px 36px;
+  border-radius: 50px;
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #1572A9;
+  padding: 8px 16px;
+  border-radius: 50px;
+  color: #1572A1;
+}
+
+/* cards */
+
+.card img {
+  width: 250px;
+}
+
+.card p {
+  opacity: .5;
+}
+
+.card-home {
+  width: 300px;
+  height: 400px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 900px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+@media(max-width: 500px) {
+  .cards {
+    justify-content: space-around;
+  }
+}
+
+/* container */
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+@media(max-width: 900px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media(max-width: 500px) {
+  .container {
+    width: 300px;
+  }
+}
