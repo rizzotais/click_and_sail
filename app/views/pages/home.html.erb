@@ -2,26 +2,28 @@
 <!-- code a Hero / Banner section -->
   <div class="banner-home" style="background-image: url(https://images.unsplash.com/photo-1533537124921-db3248c9fa93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Ym9hdCUyMHN1bnNldHxlbnwwfHwwfHw%3D&w=1000&q=80);">
     <div class="container">
-      <h1 class="text-center-home">Welcome to Click and Sail</h1>
-      <p>Here you can rent the best Boats!</p>
-      <a class="btn-primary" href="#">Start now!</a>
+      <h1 class="text-home" style="text-align:center">Welcome to Click and Sail</h1>
+      <h4 style="color: white; text-align:center">Here you can rent the best Boats!</h4>
+      <%= link_to "Start now", boats_path, class: "btn btn-lg btn-primary"  %>
     </div>
   </div>
 <!-- code a "How it works" section -->
-  <div class="container">
-    <h2 class="text-center-home">How it works</h2>
-    <div class="cards">
+  <div class="container-home">
+    <h2 class="howworks-text" style="text-align:center">How it works</h2>
+    <div class="cards-home">
 
       <div class="card-home">
-        <img src="images/apply.svg" alt="">
+        <img src="https://images.unsplash.com/photo-1588401273872-959d2076283a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" width="180" height="200" >
         <h4>Book a Boat</h4>
         <p>Find the Boat that matches with your need</p>
+         <%= link_to "Book now", boats_path, class: "btn btn-sm btn-primary"  %>
       </div>
 
       <div class="card-home">
-        <img src="images/learn.svg" alt="">
+        <img src="https://images.unsplash.com/photo-1558349771-6a9081a38a15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="180" height="200">
         <h4>Rent your Boat</h4>
         <p>Rent out your Boat!</p>
+        <%= link_to "Start now", boats_path, class: "btn btn-sm btn-primary"  %>
       </div>
     </div>
   </div>
