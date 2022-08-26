@@ -1,13 +1,15 @@
-<div class="card mb-3">
-  <img <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill %> src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h1 class="card-title"> Boat <%=@boat.boat_type%> <%=@boat.brand%>  ! </h1>
+<div class="container-show card-show mb-3">
+  <div class= "banner-show">
+     <%= cl_image_tag @boat.photo.key %>
+  </div>
+  <div class="card-body-show">
+    <li class="btn-primary-show">
+      <%= link_to "Booking", new_boat_booking_path(@boat), class: "nav-link" %>
+    </li>
+    <h2 class="card-title"> Boat <%=@boat.boat_type%> <%=@boat.brand%>  ! </h2>
     <p class="card-text">Size <%= @boat.size%></p>
     <p class="card-text">Year: <%= @boat.year%></p>
     <p class="card-text">Size: <%= @boat.size%></p>
     <p class="card-text">Type: <%= @boat.boat_type%></p>
   </div>
 </div>
-<li class="nav-item">
-   <%= link_to "Booking", new_boat_booking_path(@boat), class: "nav-link" %>
- </li>
